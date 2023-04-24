@@ -57,6 +57,38 @@
     color: var(--main-red);
      margin: 0;
   }
+  .myself {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 25px 0 25px 0;
+  }
+  .myself span{
+    font-weight: bold;
+  }
+  .myself img{
+    border-radius: 50%;
+    box-shadow: 10px 10px;
+    width: 400px;
+    height: 400px;
+  }
+  .aboutme{
+    width: 500px;
+  
+  }
+  .aboutajmir{
+    font-size: 50px;
+    margin: 0 0 0 20px;
+    text-align: center;
+    padding: 0 20px 0 0;
+  }
+  .aboutajmir1{
+    font-size: 20px;
+  }
+  .myself ol{
+    list-style-type: none;
+    font-size: 30px;
+    padding: 0;
+  }
   #projects{
     background: var(--main-blue);
     padding: 50px 20px;
