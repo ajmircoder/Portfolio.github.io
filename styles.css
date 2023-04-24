@@ -210,8 +210,20 @@
     color: var(--main-white);
     text-decoration: none;
   }
-  @media{
+  @media only screen and (max-width: 1024px) {
+    .picture {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
   
+  /* For small screens */
+  @media only screen and (max-width: 767px) {
+    .picture {
+      grid-template-columns: 1fr;
+    }
+    .myself{
+      display: block;
+    }
   }
   #navbar{
     position: fixed;
