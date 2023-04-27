@@ -67,7 +67,7 @@
   }
   .myself img{
     border-radius: 50%;
-    box-shadow: 10px 10px;
+    box-shadow: 20px 20px 20px black;
     width: 200px;
     height: 200px;
     transition: width,height 3s,3s ease-in-out;
