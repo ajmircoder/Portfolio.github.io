@@ -70,7 +70,7 @@
     box-shadow: 10px 10px;
     width: 200px;
     height: 200px;
-    transition: width,height 2s,2s ease-in-out;
+    transition: width,height 3s,3s ease-in-out;
   }
   .ajmir-image{
     display: flex;
@@ -82,6 +82,7 @@
   .ajmir-image img:hover{
     height: 400px;
     width: 400px;
+    transform: rotate(360deg);
   }
   .aboutme{
     width: 500px;
