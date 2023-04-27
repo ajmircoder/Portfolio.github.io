@@ -68,8 +68,20 @@
   .myself img{
     border-radius: 50%;
     box-shadow: 10px 10px;
-    width: 400px;
+    width: 200px;
+    height: 200px;
+    transition: width,height 2s,2s ease-in-out;
+  }
+  .ajmir-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+  .ajmir-image img:hover{
     height: 400px;
+    width: 400px;
   }
   .aboutme{
     width: 500px;
@@ -210,14 +222,14 @@
     color: var(--main-white);
     text-decoration: none;
   }
-  @media only screen and (max-width: 1024px) {
+  @media (max-width: 1024px) {
     .picture {
       grid-template-columns: 1fr 1fr;
     }
   }
   
   /* For small screens */
-  @media only screen and (max-width: 767px) {
+  @media (max-width: 767px) {
     .picture {
       grid-template-columns: 1fr;
     }
