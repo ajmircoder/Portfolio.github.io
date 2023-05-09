@@ -1,0 +1,201 @@
+* {
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body:hover .div1-1 {
+    background: #ff006e;
+    border: 18px solid #ff006e;
+    height: 55vh;
+    width: 55vh;
+    box-shadow: 0 0 10px #03bcf4,
+        inset 0 5px 25px #00000080,
+        0 0 20px #8338ec,
+        0 0 40px #8338ec,
+        0 0 80px #8338ec ;
+}
+
+body:hover .div1-2 {
+    background: #8338ec;
+    border: 18px solid #8338ec;
+    box-shadow: inset 0 5px 25px #00000080,
+        0 0 20px #ff006e,
+        0 0 40px #ff006e,
+        0 0 80px #ff006e;
+    height: 60vh;
+    width: 60vh;
+}
+
+body:hover .div1-3 {
+    background: black;
+    border: 18px solid black;
+    box-shadow: inset 0 5px 25px rgb(46, 43, 43);
+    height: 56vh;
+    width: 56vh;
+}
+
+.fix {
+    position: fixed;
+}
+
+.div1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transition: 2s; */
+}
+
+.div1-1 {
+    /* background: #25283D;
+    border: 18px solid #1e213a;
+    box-shadow: inset 0 5px 25px #00000080;
+    height: 55vh;
+    width: 55vh; */
+    rotate: 45deg;
+    transition: 3s ease-in-out;
+}
+
+.div1:hover #one {
+    transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    height: 60vh;
+    width: 60vh;
+    border-radius: 5%;
+}
+
+.div1-2 {
+    /* background: #023b02;
+    border: 18px solid #023b02;
+    box-shadow: inset 0 5px 25px #00000080; 
+    height: 60vh;
+    width: 60vh; */
+    transition: 4s;
+    border-radius: 5%;
+
+}
+
+.div1:hover #two {
+    transform: rotate(-405deg);
+    -webkit-transform: rotate(-405deg);
+    -ms-transform: rotate(-405deg);
+    height: 55vh;
+    width: 55vh;
+    border-radius: 0;
+}
+
+.div1-3 {
+    /* background: black;
+    border: 18px solid black;
+    box-shadow: inset 0 5px 25px rgb(46, 43, 43);
+    height: 56vh;
+    width: 56vh; */
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    margin: 0;
+    transition: 3s ease-in-out;
+    color: black;
+}
+
+#letter {
+    font-size: 6rem;
+    font-family: 'Foldit', cursive;
+}
+
+.div1-3:hover p {
+    color: white;
+    box-shadow: 0 0 10px #03bcf4,
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4,
+        0 0 240px #03bcf4;
+    background-color: #03bcf4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+    line-height: 0.70em;
+    outline: none;
+}
+
+.letter1 {
+    position: relative;
+    top: -160px;
+    left: 280px;
+    padding: 2px;
+    rotate: 180deg;
+    transition: 3.5s ease-in-out;
+}
+
+.div1-3:hover .letter1 {
+    top: 0px;
+    left: 2px;
+    transform: rotate(1262deg);
+}
+
+.letter2 {
+    position: relative;
+    top: 180px;
+    left: 220px;
+    padding: 2px;
+    rotate: 180deg;
+    transition: 3.8s ease-in-out;
+}
+
+.div1-3:hover .letter2 {
+    top: 0px;
+    left: 0px;
+    transform: rotate(1258deg);
+}
+
+.letter3 {
+    rotate: 180deg;
+    transition: 3.9s ease-in-out;
+
+}
+
+.div1-3:hover .letter3 {
+    transform: rotate(897deg);
+    top: -3px;
+}
+
+.letter4 {
+    position: relative;
+    top: -170px;
+    left: -220px;
+    padding: 2px;
+    rotate: 180deg;
+    transition: 4s ease-in-out;
+}
+
+.div1-3:hover .letter4 {
+    top: 0px;
+    left: 0px;
+    transform: rotate(1260deg);
+}
+
+.letter5 {
+    position: relative;
+    top: 180px;
+    left: -280px;
+    padding: 2px;
+    rotate: 180deg;
+    transition: 4.1s ease-in-out;
+}
+
+.div1-3:hover .letter5 {
+    top: 0px;
+    left: 0px;
+    transform: rotate(1255deg);
+}
