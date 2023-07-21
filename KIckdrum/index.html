@@ -63,38 +63,35 @@
 
     <script>
         window.addEventListener('keydown', async (e) => {
+            doAnimation(e.keyCode);
+        });
+        const keys = document.querySelectorAll('.key');
+
+        keys.forEach((div) => {
+            div.addEventListener('click', (e) => {
+                doAnimation(div.getAttribute("data-key"));
+            });
+        })
+
+        keys.forEach((key) => {
+            key.addEventListener('transitionend', () => {
+                key.classList.remove('key-css');
+            });
+        });
+
+        const doAnimation = async (keyCode) => {
             try {
-                const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-                const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+                const audio = document.querySelector(`audio[data-key="${keyCode}"]`);
+                const key = document.querySelector(`div[data-key="${keyCode}"]`);
                 if (!audio) return;
                 key.classList.add('key-css');
-                key.addEventListener('transitionend', () => {
-                    key.classList.remove('key-css');
-                })
                 audio.currentTime = 0;
                 audio.play();
-
             } catch (error) {
                 console.log(`error ${error}`)
             }
-        });
-        // let keys = document.querySelectorAll('.key')
-        // keys.forEach((key) => {
-        //     key.addEventListener('mouseover', (e) => {
-        //         if (e.target) {
-        //             key.classList.add('key-css');
-        //             console.log(e.target)
-        //             // audio.play();
-        //         }
-        //     })
-        //     key.addEventListener('mouseout', (e) => {
-        //         if (e.target) {
-        //             key.classList.remove('key-css');
-        //             // audio.play();
+        }
 
-        //         }
-        //     })
-        // })
     </script>
 </body>
 
