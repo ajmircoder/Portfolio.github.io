@@ -1,0 +1,130 @@
+:root {
+    --primary-light: #8abdff;
+    --primary: #6d5dfc;
+    --primary-dark: #5b0eeb;
+    --white: #fff;
+    --greyLight-1: #e4ebf5;
+    --greyLight-2: #c8d0e7;
+    --greyLight-3: #bec8e4;
+    --greyDark: #9baacf;
+    --shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    --inner-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+body {
+    /* background: var(--greyLight-1); */
+    background: #00A99E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+.clock {
+    grid-column: 0.6666666667;
+    grid-row: 0.3333333333;
+    width: 12rem;
+    height: 12rem;
+    justify-self: center;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.marker {
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: var(--inner-shadow);
+}
+.marker::after {
+    content: '';
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    box-shadow: inset 1px 1px 1px var(--greyLight-2), inset -1px -1px 1px var(--white);
+    border-radius: 50%;
+    top: 20%;
+    left: 20%;
+    filter: blur(1px);
+}
+.marker__1, .marker__2, .marker__3, .marker__4 {
+    position: absolute;
+    border-radius: 0.1rem;
+    box-shadow: inset 1px 1px 1px var(--greyLight-2), inset -1px -1px 1px var(--white);
+}
+.marker__1, .marker__2 {
+    width: 0.2rem;
+    height: 0.6rem;
+    left: 5.6rem;
+}
+.marker__3, .marker__4 {
+    width: 0.6rem;
+    height: 0.2rem;
+    top: 5.6rem;
+}
+.marker__1 {
+    top: 2%;
+}
+.marker__2 {
+    top: 98%;
+    transform: translateY(-0.6rem);
+}
+.marker__3 {
+    left: 2%;
+}
+.marker__4 {
+    left: 98%;
+    transform: translateX(-0.6rem);
+}
+
+.point {
+    position: absolute;
+    width: .8rem;
+    height: .8rem;
+    border-radius: 50%;
+    background: var(--primary);
+    z-index: 300;
+  }
+
+
+  .hand {
+    position: absolute;
+    transform-origin: bottom;
+    bottom: 6rem;
+    border-radius: .2rem;
+    z-index: 200;
+    transform: rotate(0deg);
+
+  }
+
+  .hours {
+    width: .4rem;
+    height: 3.2rem;
+    background: var(--greyLight-3);
+    transition: ease-in-out;
+  }
+  
+  .minutes {
+    width: .4rem;
+    height: 4.6rem;
+    background: var(--greyDark);
+  }
+  .seconds {
+    width: .2rem;
+    height: 5.2rem;
+    background: var(--primary);
+  }
