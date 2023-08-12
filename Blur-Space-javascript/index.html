@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <title>Blur-Spacing project</title>
+</head>
+
+<body>
+    <h1><span class="hi">JAVASCRIPT</span></h1>
+
+    <div>
+        <label for="Blur">Blur:</label>
+        <input data-sizing="px" type="range" name="blur" id="Blur" min="0" max="12" value="0">
+    </div>
+    <div>
+        <label for="Space">Space:</label>
+        <input data-sizing="px" type="range" name="space" id="Space" min="0" max="30" value="0">
+    </div>
+    <div>
+        <label for="Color">Color:</label>
+        <input type="color" name="color" id="Color">
+    </div>
+    <div>
+        <label class="btn btn-success" for="Image-file">Select Images</label>
+        <input type="file" name="img" id="Image-file" multiple style="visibility: hidden; display: none;">
+    </div>
+    <div>
+        <img id="Image"
+            src="https://img.freepik.com/free-photo/puppy-that-is-walking-snow_1340-37228.jpg"
+            alt="">
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
